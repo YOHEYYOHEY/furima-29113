@@ -4,7 +4,7 @@
 
 | Column             | Type       | Options                        |
 | -----------------  | ---------- | ------------------------------ | 
-| user               | string     | null: false                    |
+| nickname           | string     | null: false                    |
 | email              | string     | null: false,uniqueness: true   |
 | encrypted_password | string     | null: false                    |
 | first_name         | string     | null: false                    |
@@ -24,10 +24,10 @@
 | Column               | Type       | Options       |
 | -------------------- | ---------- | ------------- | 
 | name                 | string     | null: false   |
-| introduction         | string     | null: false   |
-| category             | string     | null: false   |
-| status _id           | inter      | null: false   |
-| delivery_charge_id   | inter      | null: false   |
+| introduction         | text       | null: false   |
+| category_id          | integer    | null: false   |
+| status _id           | integer    | null: false   |
+| delivery_charge_id   | integer    | null: false   |
 | delivery_area_id     | integer    | null: false   |
 | delivery_day_id      | integer    | null: false   |
 | price                | integer    | null: false   |
@@ -55,7 +55,7 @@ _ belongs_to :purchases
 
 ### Association
 
-- belongs_to :users
+- belongs_to :purchases
 
 ## purchasesテーブル
 
