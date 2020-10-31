@@ -36,7 +36,7 @@
 
 - has_many :products
 - belongs_to :user
-_ belongs_to :purchases
+_ belongs_to :purchase
 
 
 ## addressテーブル
@@ -55,7 +55,7 @@ _ belongs_to :purchases
 
 ### Association
 
-- belongs_to :purchases
+- belongs_to :purchase
 
 ## purchasesテーブル
 
@@ -66,5 +66,5 @@ _ belongs_to :purchases
 
 ### Association
 
-- belongs_to :users
-- belongs_to :items
+- belongs_to :user
+- belongs_to :item
