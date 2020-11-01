@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
   devise_for :users
-  get 'users', to: 'users#index'
+  root to: 'users#index'
 
 
 end
