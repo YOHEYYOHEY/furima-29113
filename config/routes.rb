@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   
   end
 
+  resources :items do
+  
+  end
+
 end
