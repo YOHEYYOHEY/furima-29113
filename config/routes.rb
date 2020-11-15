@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  get 'articles/index'
+  get 'articles/new'
+  post 'items/new'
+  # root to: 'articles#index'
+  # resources :articles
   
   devise_for :users
 
