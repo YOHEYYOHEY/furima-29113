@@ -8,8 +8,12 @@ FactoryBot.define do
     delivery_area_id      { 1 }
     delivery_day_id       { 1 }
     price                 { 1000 }
-
-    user_id       { FactoryBot.create(:user).id }
+    #created_at { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
+    #updated_at { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
+    #user_id               { 1 }
+    #item_id               { 1 }
+    
+    association :user
 
     after(:build) do |item|
       item.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
