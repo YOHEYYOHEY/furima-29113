@@ -35,6 +35,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'faker'
+  gem 'active_hash'
 end
 
 group :development do
@@ -63,3 +64,4 @@ group :production do
 end
 
 gem 'devise'
+gem 'mini_magick'
