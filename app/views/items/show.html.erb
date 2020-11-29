@@ -19,7 +19,7 @@
         <%= @item.price.to_s.reverse.gsub( /(\d{3})(?=\d)/, '\1,').reverse %>円
       </span>
       <span class="item-postage">
-        <%= @item.delivery_charge_id %>
+        <%= @item.delivery_charge.name %>
       </span>
     </div>
 
