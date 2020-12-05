@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :show, :edit, :update]
   before_action :set_item, only: [:show, :edit, :update]
 
   def index
@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
     @item.update(item_params)
     if @item.save
 
-      redirect_to root_path
+      render :show
     else
       render :new
     end
