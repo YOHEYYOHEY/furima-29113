@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'items/new'
 
   get  'orders/index'
+  post 'orders/create'
   
   devise_for :users
 
