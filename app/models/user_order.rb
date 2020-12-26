@@ -1,12 +1,12 @@
 class UserOrder
   include ActiveModel::Model
-  attr_accessor :purchase_id, :item_id, :user_id, :number, :exp_month, :exp_year, :cvc, :postal_code, :prefecture_id, :city, :house_number, :building_name, :phone_number
+  attr_accessor :token, :purchase_id, :item_id, :user_id, :postal_code, :prefecture_id, :city, :house_number, :building_name, :phone_number
 
   with_options presence: true do
-    validates :number, format: { with: /\A[a-zA-Z0-9]+\z/ }
-    validates :exp_month, format: { with: /\A[0-9]\z/ }
-    validates :exp_year, format: { with: /\A[0-9]{,2}\z/ }
-    validates :cvc, format: { with: /\A[0-9]{,4}\z/ }
+    # validates :number, format: { with: /\A[a-zA-Z0-9]+\z/ }
+    # validates :exp_month, format: { with: /\A[0-9]\z/ }
+    # validates :exp_year, format: { with: /\A[0-9]{,2}\z/ }
+    # validates :cvc, format: { with: /\A[0-9]{,4}\z/ }
     validates :postal_code, format: { with: /\A[0-9]{3}-?[0-9]{4}\z/ }
     validates :prefecture_id
     validates :city
