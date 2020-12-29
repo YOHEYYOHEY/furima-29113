@@ -8,7 +8,7 @@ class UserOrder
     # validates :exp_year, format: { with: /\A[0-9]{,2}\z/ }
     # validates :cvc, format: { with: /\A[0-9]{,4}\z/ }
     validates :token
-    validates :postal_code, format: { with: /\A[0-9]{3}-?[0-9]{4}\z/ }
+    validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/ }
     validates :prefecture_id
     validates :city
     validates :house_number

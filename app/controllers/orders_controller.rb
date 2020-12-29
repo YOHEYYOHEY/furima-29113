@@ -3,6 +3,17 @@ class OrdersController < ApplicationController
   def index
     @item = Item.find(params[:item_id])
     @user_order = UserOrder.new
+    
+    if current_user.id == @item.user_id
+
+      redirect_to root_path
+
+    else
+
+      render:index
+
+    end
+
   end
 
   def create
