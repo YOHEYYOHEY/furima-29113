@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'articles/new'
   get 'articles/show'
   post 'items/new'
+
+  get  'orders/index'
+  post 'orders/create'
   
   devise_for :users
 
@@ -14,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :items do
-  
+    resources :orders
   end
 
 end
