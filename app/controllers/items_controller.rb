@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    if current_user.id == @item.user_id
+    if current_user.id == @item.user_id and @item.purchase == nil
       @item.destroy
 
     else
