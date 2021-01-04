@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if current_user.id == @item.user_id
+    if current_user.id == @item.user_id and @item.purchase == nil
 
       render :edit
 
@@ -40,6 +40,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
 
       redirect_to item_path
+
     else
       render :edit
     end
