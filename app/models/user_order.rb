@@ -1,6 +1,6 @@
 class UserOrder
   include ActiveModel::Model
-  attr_accessor :token, :purchase_id, :item_id, :user_id, :postal_code, :prefecture_id, :city, :house_number, :building_name, :phone_number
+  attr_accessor :token, :item_id, :user_id, :postal_code, :prefecture_id, :city, :house_number, :building_name, :phone_number
 
   with_options presence: true do
     validates :token
